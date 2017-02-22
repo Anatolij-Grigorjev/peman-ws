@@ -19,7 +19,9 @@
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map />
+        <datasource-map>
+          <unit-entry name="Gorm" />
+        </datasource-map>
         <naming-strategy-map />
       </configuration>
     </facet>
@@ -38,6 +40,7 @@
       <sourceFolder url="file://$MODULE_DIR$/test/unit" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test/integration" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/target/work/gspcompile" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/plugin-build-classes" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/plugin-classes" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/plugin-provided-classes" />
@@ -254,6 +257,7 @@
           <root url="jar://$USER_HOME$/.sdkman/candidates/grails/2.5.4/dist/grails-plugin-testing-2.5.4-sources.jar!/" />
           <root url="jar://$USER_HOME$/.sdkman/candidates/grails/2.5.4/dist/grails-docs-2.5.4-sources.jar!/" />
           <root url="jar://$USER_HOME$/.sdkman/candidates/grails/2.5.4/dist/grails-scripts-2.5.4-sources.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/ojdbc14.jar!/" />
         </SOURCES>
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>

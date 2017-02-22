@@ -5,7 +5,7 @@ import grails.converters.JSON
 class DebugController {
 
    static allowedMethods = [
-     'GET'
+     'GET', 'POST'
    ]
 
 
@@ -15,7 +15,18 @@ class DebugController {
     if (params.id) {
       render debugService.testConnection(params.id as Long) as JSON
     } else {
-      render (204) as JSON
+      render ([msg: 'no comment']) as JSON
+    }
+  }
+
+  def auth = {
+    def json = request.JSON
+    if (json.username && json.password) {
+
+      render debugService.connect(json.username as String, json.password as String) as JSON
+
+    } else {
+      render ([msg: 'no creds!']) as JSON
     }
   }
 }
